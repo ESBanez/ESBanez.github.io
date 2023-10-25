@@ -12,7 +12,7 @@ import Projects from "./pages/settings/Projects";
 
 
 
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/Navbar";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 
