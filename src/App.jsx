@@ -1,22 +1,51 @@
-import React from "react"; // Make sure to import React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Projects from "./pages/Projects.jsx";
-import Skills from "./pages/Skills.jsx";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Skills from "./pages/Skills";
+import Pricing from "./pages/Pricing";
+import Blog from "./pages/Blog";
+
+import CurriculumVitae from "./pages/settings/CurriculumVitae";
+import Profile from "./pages/settings/Profile";
+import Projects from "./pages/settings/Projects";
+
+
+
+import Navbar from "./components/Navbar";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#040D12', // Replace '#f00' with your desired color value
+    },
+  },
+})
+
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/skills" element={<Skills />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/curriculum-vitae" element={<CurriculumVitae />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/projects" element={<Projects />} />
+
+      </Routes>
+      </ThemeProvider>
+
+    </BrowserRouter>
   );
 }
+
 export default App;

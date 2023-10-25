@@ -1,9 +1,9 @@
-import NavBar from "../components/NavBar"; // No need for the ".jsx" extension
+//import Navbar from "../components/Navbar"; // No need for the ".jsx" extension
 
 function Home() {
   return (
     <>
-      <NavBar />
+      Home
     </>
   );
 }
