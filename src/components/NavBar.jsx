@@ -149,7 +149,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="My experiences">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, color: '#00FFA1' }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <p>E</p>
               </IconButton>
             </Tooltip>
             <Menu
